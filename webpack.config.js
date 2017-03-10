@@ -72,7 +72,7 @@ module.exports = {
     ],
     watch : true,
     resolve : {
-        modules : [NODE_MODULES, SOURCE]
+        modules : [NODE_MODULES, `${SOURCE}/modules`]
     },
     devServer: {
         contentBase: path.resolve(__dirname, DIST),

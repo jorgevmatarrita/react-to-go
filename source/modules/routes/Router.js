@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
 // Page Components.
-import { Home } from 'routes';
+import { Home } from 'modules/routes';
 
 const plugins = [
     pushStateLocationPlugin,
