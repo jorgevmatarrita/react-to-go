@@ -13,7 +13,7 @@ const
 module.exports = {
     context : path.resolve(__dirname, SOURCE),
     entry : {
-        app : './app.junction.js',
+        app : './router.js',
     },
     output : {
         path : path.resolve(__dirname, DIST),
@@ -37,9 +37,14 @@ module.exports = {
                 })
             },
             {
-                test: /\.(jpg|png|gif)$/,
+                test: /\.(jpg|jpeg|gif)$/,
                 exclude: [/node_modules/],
                 loader: 'url-loader?limit=10000&name=./images/[name].[ext]'
+            },
+            {
+                test: /\.(svg|ico|png)$/,
+                exclude: [/node_modules/],
+                loader: 'url-loader?limit=10000&name=./icons/[name].[ext]'
             },
             {
                 test: /\.(ttf|eot)$/,
@@ -72,7 +77,7 @@ module.exports = {
     ],
     watch : true,
     resolve : {
-        modules : [NODE_MODULES, `${SOURCE}/modules`]
+        modules : [NODE_MODULES, SOURCE]
     },
     devServer: {
         contentBase: path.resolve(__dirname, DIST),
