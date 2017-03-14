@@ -13,7 +13,7 @@ const
 module.exports = {
     context : path.resolve(__dirname, SOURCE),
     entry : {
-        app : './router.js',
+        app : './app.main.js',
     },
     output : {
         path : path.resolve(__dirname, DIST),

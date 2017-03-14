@@ -1,7 +1,7 @@
 import React from 'react';
 import { UISref } from 'ui-router-react';
 
-import { Button, Image } from 'modules/common';
+import { Button, Image } from 'app/components/shared';
 import { home_icon } from 'assets/icons';
 
 module.exports = () => 

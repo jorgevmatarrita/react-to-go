@@ -1,14 +1,11 @@
-// Application styles.
-require('./assets/styles/app.scss');
-
 // Dependencies.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
 // Route Components.
-import { Home, About } from 'modules/routes';
+import { Home, About } from 'app/views';
 // App Components.
-import { Header } from 'modules/app';
+import { Header } from 'app/components';
 
 const plugins = [
     pushStateLocationPlugin,
