@@ -1,4 +1,9 @@
-import { createStore } from 'redux';
-import { Reducers } from 'app/reducers';
+import { createStore, combineReducers } from 'redux';
 
-export const Store = createStore(Reducers);
+import counter  from '../components/Counter/counter.reducer';
+
+module.exports = createStore(
+    combineReducers({
+        counter
+    })
+);

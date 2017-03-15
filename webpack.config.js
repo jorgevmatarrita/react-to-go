@@ -79,6 +79,7 @@ module.exports = {
     resolve : {
         modules : [NODE_MODULES, SOURCE]
     },
+    devtool: 'source-map',
     devServer: {
         contentBase: path.resolve(__dirname, DIST),
     },

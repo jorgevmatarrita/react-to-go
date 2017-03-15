@@ -1,10 +1,11 @@
 // Dependencies.
 import React from 'react';
-import Provider from 'react-redux';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
+import Helmet from 'react-helmet';
 // Store.
-import Store from 'app/redux';
+import { Store } from 'app/redux';
 // Route Components.
 import { Home, About } from 'app/views';
 // App Components.
@@ -27,13 +28,15 @@ const routes = [
     }
 ];
 
-
 ReactDOM.render(
-    <UIRouter plugins={plugins} states={routes} >
-        <Provider store={Store}>
-            <Header />
-            <UIView />
-        </Provider>
-    </UIRouter>,
+    <Provider store={Store}>
+        <UIRouter plugins={plugins} states={routes} >
+            <section>
+                <Helmet title="My Title" />
+                <Header />
+                <UIView />
+            </section>
+        </UIRouter>
+    </Provider>,
     document.getElementById('ui-view')
 );
