@@ -1,5 +1,8 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 module.exports = () => 
-    <h1>Test view</h1>
+    <section>
+        <h1>About.</h1>
+    </section>
 ;

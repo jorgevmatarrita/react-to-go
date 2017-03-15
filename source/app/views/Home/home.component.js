@@ -6,7 +6,6 @@ import { home_icon } from 'assets/icons';
 
 module.exports = () => 
     <div>
-        <h1>App</h1>
-        <Image source={home_icon} />
+        <h1>React to go!</h1>
     </div>
 ;

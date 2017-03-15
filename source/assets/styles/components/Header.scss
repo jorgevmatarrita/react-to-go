@@ -1,3 +1,20 @@
 header {
-    padding: 15ppx;
+    padding: 15px;
+    background: whitesmoke;
+    border-bottom: 1px solid#1BBC9B;
+
+    nav {
+        ul { @include clearfix; }
+        li {
+            float: left;
+            width: 100px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        a, a:visited {
+            color:#1BBC9B;
+        }
+    }
+
 }

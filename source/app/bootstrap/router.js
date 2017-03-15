@@ -32,7 +32,7 @@ ReactDOM.render(
     <Provider store={Store}>
         <UIRouter plugins={plugins} states={routes} >
             <section>
-                <Helmet title="My Title" />
+                <Helmet title="React to go!" />
                 <Header />
                 <UIView />
             </section>
