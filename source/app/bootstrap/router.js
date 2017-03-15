@@ -1,7 +1,10 @@
 // Dependencies.
 import React from 'react';
+import Provider from 'react-redux';
 import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
+// Store.
+import Store from 'app/redux';
 // Route Components.
 import { Home, About } from 'app/views';
 // App Components.
@@ -27,10 +30,10 @@ const routes = [
 
 ReactDOM.render(
     <UIRouter plugins={plugins} states={routes} >
-        <section>
+        <Provider store={Store}>
             <Header />
             <UIView />
-        </section>
+        </Provider>
     </UIRouter>,
     document.getElementById('ui-view')
 );
