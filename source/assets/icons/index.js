@@ -1,2 +1,1 @@
-export { default as adress_icon } from './adress.ico';
-export { default as home_icon } from './home.png'
+export { default as react_icon } from './react.png';

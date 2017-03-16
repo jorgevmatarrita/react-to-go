@@ -1,4 +1,4 @@
 // Application styles.
 require('./assets/styles/app.scss');
-// Application bootstrap.
-require('./app/bootstrap/router.js');
+// Application styles.
+require('./app.router.js');

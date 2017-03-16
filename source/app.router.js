@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
 import Helmet from 'react-helmet';
 // Store.
-import { Store } from 'app/redux';
+import { ConfigureStore } from 'app/redux';
 // Route Components.
-import { Home, About } from 'app/views';
+import { Home, Example } from 'app/views';
 // App Components.
 import { Header } from 'app/components';
 
@@ -15,22 +15,24 @@ const plugins = [
     pushStateLocationPlugin,
 ];
 
-const routes = [
+const views = [
      {
         name: 'home',
         url: '/',
         component: Home,
     },
     {
-        name: 'about',
-        url: '/about',
-        component: About,
+        name: 'example',
+        url: '#/example',
+        component: Example,
     }
 ];
 
+const store = ConfigureStore();
+
 ReactDOM.render(
-    <Provider store={Store}>
-        <UIRouter plugins={plugins} states={routes} >
+    <Provider store={store}>
+        <UIRouter plugins={plugins} states={views} >
             <section>
                 <Helmet title="React to go!" />
                 <Header />

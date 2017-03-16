@@ -20,6 +20,7 @@
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.2",
+    "redux-immutable-state-invariant": "^2.0.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "ui-router-react": "^0.4.0",

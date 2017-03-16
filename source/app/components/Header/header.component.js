@@ -1,26 +1,33 @@
 import React from 'react';
-import { UISref } from 'ui-router-react';
+import { UISref, UISrefActive } from 'ui-router-react';
+
+import { Image } from 'app/components/shared';
+import { react_icon } from 'assets/icons';
 
 module.exports = () => 
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <UISref to="home" >
-                        <a>Home</a>
-                    </UISref>
-                </li>
-                <li>
-                    <UISref to="about" >
-                        <a>About</a>
-                    </UISref>
-                </li>
-                <li>
-                    <UISref to="contact" >
-                        <a>Contact</a>
-                    </UISref>
-                </li>
-            </ul>
-        </nav>
+        <div className="container" >
+            <UISref to="home" >
+                <a><Image css="logo" source={react_icon} /></a>
+            </UISref>
+            <nav>
+                <ul>
+                    <li>
+                        <UISrefActive class="active">
+                            <UISref to="home" >
+                                <a>Home</a>
+                            </UISref>
+                        </UISrefActive>
+                    </li>
+                    <li>
+                        <UISrefActive class="active">
+                            <UISref to="example" >
+                                <a>Example</a>
+                            </UISref>
+                        </UISrefActive>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 ;

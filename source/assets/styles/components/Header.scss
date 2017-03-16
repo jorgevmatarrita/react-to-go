@@ -1,20 +1,30 @@
 header {
     padding: 15px;
     background: whitesmoke;
-    border-bottom: 1px solid#1BBC9B;
+    border-bottom: 1px solid #ccc;
 
     nav {
-        ul { @include clearfix; }
+        ul { 
+            @include clearfix;
+        }
         li {
             float: left;
             width: 100px;
+            transform: translateY(100%);
             text-align: center;
             text-transform: uppercase;
-            font-weight: bold;
         }
         a, a:visited {
-            color:#1BBC9B;
+            color:#1E8BC3;
+            &.active {
+                font-weight: bold;
+            }
         }
+    }
+
+    .logo {
+        height: 50px;
+        float: left;
     }
 
 }

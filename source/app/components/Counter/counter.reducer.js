@@ -1,10 +1,21 @@
-export default function counter(state = 0, action) {
+const COUNTER_ACTIONS = {
+  INCREMENT: 'INCREMENT',
+  DECREMENT: 'DECREMENT',
+};
+
+function CounterReducer (state = 0, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case COUNTER_ACTIONS.INCREMENT:
       return state + 1
-    case 'DECREMENT':
+    case COUNTER_ACTIONS.DECREMENT:
       return state - 1
     default:
       return state
   }
+
 }
+
+module.exports = {
+  COUNTER_ACTIONS,
+  CounterReducer,
+};
