@@ -14,30 +14,31 @@ class Counter extends React.Component {
     }
 
     add () {
-        alert('I am adding!');
+        this.props.add();
     }
 
     substract () {
-        alert('I am substracting');
+        this.props.substract();
     }
 
     render () {
-        return <CounterComponent add={this.add} substract={this.substract} counter={this.state.count} />
+        return <CounterComponent add={this.add.bind(this)} substract={this.substract.bind(this)} counter={this.props.count} />
     }
 
 }
 
 function mapStateToProps(state, ownProps) {
     return {
-        count : state.count
+        count : state.counter
     }
 };
 
 function mapDispatchToProps(dispatch) {
+    console.log(COUNTER_ACTIONS);
     return {
-        add: () =>{ dispatch(COUNTER_ACTIONS.INCREMENT) },
-        substract: () =>{ dispatch(COUNTER_ACTIONS.DECREMENT) },
-    }
+        add: () =>{ dispatch(COUNTER_ACTIONS.INCREMENT()) },
+        substract: () =>{ dispatch(COUNTER_ACTIONS.DECREMENT()) },
+    };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

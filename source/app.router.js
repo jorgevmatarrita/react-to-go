@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
 import Helmet from 'react-helmet';
 // Store.
-import { ConfigureStore } from 'app/redux';
+import { configureStore } from 'app/redux';
 // Route Components.
 import { Home, Example } from 'app/views';
 // App Components.
@@ -28,7 +28,7 @@ const views = [
     }
 ];
 
-const store = ConfigureStore();
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
