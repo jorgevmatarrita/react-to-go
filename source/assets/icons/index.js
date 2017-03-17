@@ -1,1 +1,1 @@
-export { default as react_icon } from './react.png';
+export { default as react_icon } from './react.svg';

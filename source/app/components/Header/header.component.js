@@ -11,10 +11,10 @@ module.exports = () =>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/" active="active" >Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="example" active="active" >Example</Link>
+                        <Link to="example">Example</Link>
                     </li>
                 </ul>
             </nav>
