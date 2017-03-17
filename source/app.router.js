@@ -2,7 +2,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import { UIRouter, UIView, pushStateLocationPlugin } from 'ui-router-react';
+import { Router, Route, Link, IndexRoute, HashRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 // Store.
 import { configureStore } from 'app/redux';
@@ -11,34 +11,24 @@ import { Home, Example } from 'app/views';
 // App Components.
 import { Header } from 'app/components';
 
-const plugins = [
-    pushStateLocationPlugin,
-];
+import * as rrd from 'react-router-dom';
 
-const views = [
-     {
-        name: 'home',
-        url: '/',
-        component: Home,
-    },
-    {
-        name: 'example',
-        url: '#/example',
-        component: Example,
-    }
-];
+console.log(rrd);
 
-const store = configureStore();
+const 
+    store = configureStore(),
+    hashRouter = new HashRouter();
 
 ReactDOM.render(
     <Provider store={store}>
-        <UIRouter plugins={plugins} states={views} >
+        <Router history={hashRouter.history} >
             <section>
                 <Helmet title="React to go!" />
                 <Header />
-                <UIView />
+                <Route exact path="/" component={Home} />
+                <Route path="/example" component={Example} />
             </section>
-        </UIRouter>
+        </Router>
     </Provider>,
     document.getElementById('ui-view')
 );

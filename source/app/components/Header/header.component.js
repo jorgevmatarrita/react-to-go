@@ -1,5 +1,5 @@
 import React from 'react';
-import { UISref, UISrefActive } from 'ui-router-react';
+import { Link } from 'react-router-dom';
 
 import { Image } from 'app/components/shared';
 import { react_icon } from 'assets/icons';
@@ -7,24 +7,14 @@ import { react_icon } from 'assets/icons';
 module.exports = () => 
     <header>
         <div className="container" >
-            <UISref to="home" >
-                <a><Image css="logo" source={react_icon} /></a>
-            </UISref>
+            <Link to="/" ><Image css="logo" source={react_icon} /></Link>
             <nav>
                 <ul>
                     <li>
-                        <UISrefActive class="active">
-                            <UISref to="home" >
-                                <a>Home</a>
-                            </UISref>
-                        </UISrefActive>
+                        <Link to="/" active="active" >Home</Link>
                     </li>
                     <li>
-                        <UISrefActive class="active">
-                            <UISref to="example" >
-                                <a>Example</a>
-                            </UISref>
-                        </UISrefActive>
+                        <Link to="example" active="active" >Example</Link>
                     </li>
                 </ul>
             </nav>

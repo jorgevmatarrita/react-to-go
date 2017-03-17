@@ -34,7 +34,6 @@ function mapStateToProps(state, ownProps) {
 };
 
 function mapDispatchToProps(dispatch) {
-    console.log(COUNTER_ACTIONS);
     return {
         add: () =>{ dispatch(COUNTER_ACTIONS.INCREMENT()) },
         substract: () =>{ dispatch(COUNTER_ACTIONS.DECREMENT()) },
