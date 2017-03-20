@@ -13,16 +13,16 @@ class Counter extends React.Component {
         };
     }
 
-    add () {
-        this.props.add();
+    increment () {
+        this.props.increment();
     }
 
-    substract () {
-        this.props.substract();
+    decrement () {
+        this.props.decrement();
     }
 
     render () {
-        return <CounterComponent add={this.add.bind(this)} substract={this.substract.bind(this)} counter={this.props.count} />
+        return <CounterComponent increment={this.increment.bind(this)} decrement={this.decrement.bind(this)} counter={this.props.count} />
     }
 
 }
@@ -35,8 +35,8 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        add: () =>{ dispatch(COUNTER_ACTIONS.INCREMENT()) },
-        substract: () =>{ dispatch(COUNTER_ACTIONS.DECREMENT()) },
+        increment: () =>{ dispatch(COUNTER_ACTIONS.INCREMENT()) },
+        decrement: () =>{ dispatch(COUNTER_ACTIONS.DECREMENT()) },
     };
 }
 

@@ -11,10 +11,6 @@ import { Home, Example } from 'app/views';
 // App Components.
 import { Header } from 'app/components';
 
-import * as rrd from 'react-router-dom';
-
-console.log(rrd);
-
 const 
     store = configureStore(),
     hashRouter = new HashRouter();

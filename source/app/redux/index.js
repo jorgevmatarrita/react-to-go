@@ -1,2 +1,2 @@
 export { default as configureStore } from './store';
-export { default as mainReducer } from './reducer.js';
+export { default as combinedReducers } from './combinedReducers.js';

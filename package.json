@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p --config webpack.production.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -17,15 +17,14 @@
     "node-sass": "^4.5.0",
     "react": "^15.4.2",
     "react-helmet": "^5.0.0-beta",
+    "react-multilingual": "^1.1.5",
     "react-redux": "^5.0.3",
-    "react-router-active-component": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.2",
     "redux-immutable-state-invariant": "^2.0.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
-    "ui-router-react": "^0.4.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-server": "2"
