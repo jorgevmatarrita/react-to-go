@@ -1102,10 +1102,6 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
-
 clean-css@4.0.x:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.0.8.tgz#063dfd593404d3a3d1db494d4b6d0f378b0781b6"
@@ -1466,6 +1462,10 @@ decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
+deep-diff@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.4.tgz#aac5c39952236abe5f037a2349060ba01b00ae48"
+
 deep-equal@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
@@ -1623,10 +1623,6 @@ error-ex@^1.2.0:
   resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
   dependencies:
     is-arrayish "^0.2.1"
-
-es6-shim@^0.35.1:
-  version "0.35.3"
-  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -2038,7 +2034,7 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoist-non-react-statics@^1.0.3:
+hoist-non-react-statics@^1.0.3, hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
@@ -2544,7 +2540,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3418,6 +3414,10 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-dom@15.3.0:
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.0.tgz#24a6a3df67969656b8a8225fd0d7fcb939d28bdd"
+
 react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
@@ -3434,6 +3434,28 @@ react-helmet@^5.0.0-beta:
     object-assign "^4.0.1"
     react-side-effect "^1.1.0"
 
+react-multilingual@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/react-multilingual/-/react-multilingual-1.1.5.tgz#76c9891c4587fd633a2ad2133af9be7525572f70"
+  dependencies:
+    hoist-non-react-statics "^1.2.0"
+    invariant "^2.2.1"
+    lodash "^4.16.4"
+    react "15.3.0"
+    react-dom "15.3.0"
+    react-redux "^4.4.5"
+    redux "^3.6.0"
+    redux-logger "^2.7.0"
+
+react-redux@^4.4.5:
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-4.4.6.tgz#4b9d32985307a11096a2dd61561980044fcc6209"
+  dependencies:
+    hoist-non-react-statics "^1.0.3"
+    invariant "^2.0.0"
+    lodash "^4.2.0"
+    loose-envify "^1.1.0"
+
 react-redux@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.3.tgz#86c3b68d56e74294a42e2a740ab66117ef6c019f"
@@ -3443,10 +3465,6 @@ react-redux@^5.0.3:
     lodash "^4.2.0"
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
-
-react-router-active-component@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-router-active-component/-/react-router-active-component-4.0.0.tgz#36fdd03915168aad521e941a76d19d8c56653533"
 
 react-router-dom@^4.0.0:
   version "4.0.0"
@@ -3471,6 +3489,14 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
+
+react@15.3.0:
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.3.0.tgz#b06a26d26e5613888acb196aa93e9c082a9c21fa"
+  dependencies:
+    fbjs "^0.8.1"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
 
 react@^15.4.2:
   version "15.4.2"
@@ -3578,6 +3604,12 @@ redux-immutable-state-invariant@^2.0.0:
   dependencies:
     invariant "^2.1.0"
     json-stringify-safe "^5.0.1"
+
+redux-logger@^2.7.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-2.10.0.tgz#445f76c207559bb5760cfba103c4439d127ac5dd"
+  dependencies:
+    deep-diff "0.3.4"
 
 redux@^3.6.0:
   version "3.6.0"
@@ -4130,18 +4162,6 @@ uglify-js@2.8.x, uglify-js@^2.7.5:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
-
-ui-router-core@^3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/ui-router-core/-/ui-router-core-3.1.1.tgz#9fccf9631bdf61d4641e333c74c3d1cc347dca18"
-
-ui-router-react@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ui-router-react/-/ui-router-react-0.4.0.tgz#d5853bc078fdb72a791cc1909bcb60a8749de8c9"
-  dependencies:
-    classnames "^2.2.5"
-    es6-shim "^0.35.1"
-    ui-router-core "^3.1.0"
 
 uid-number@~0.0.6:
   version "0.0.6"
