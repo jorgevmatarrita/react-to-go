@@ -1,7 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import reduxInmutableStateInvariant from 'redux-immutable-state-invariant';
-import { combinedReducers } from 'app/redux';
-import { CounterReducer } from '../components/Counter/counter.reducer';
+import { combinedReducers } from 'app/store';
 
 module.exports = function configureStore (initialState = {}) {
     return createStore(

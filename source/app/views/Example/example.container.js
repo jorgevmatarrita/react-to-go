@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import HomeComponent from './home.component';
+import ExampleComponent from './example.component';
 
-class Home extends React.Component {
+class Example extends React.Component {
 
     constructor () {
         super();
@@ -13,9 +13,9 @@ class Home extends React.Component {
     }
 
     render () {
-        return <HomeComponent/>
+        return <ExampleComponent/>
     }
 
 }
 
-export default connect()(Home);
+export default connect()(Example);

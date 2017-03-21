@@ -1,2 +1,2 @@
-export { default as Home } from './Home/home.component';
-export { default as Example } from './Example/example.component';
+export { default as Home } from './Home/home.container';
+export { default as Example } from './Example/example.container';

@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, IndexRoute, HashRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 // Store.
-import { configureStore } from 'app/redux';
+import { configureStore } from 'app/store';
 // Route Components.
 import { Home, Example } from 'app/views';
 // App Components.
