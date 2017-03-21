@@ -22,7 +22,7 @@ Build Production
     - ## Example: 
     import { Button, Image } from 'app/components/shared';
     Instead of:
-    import Button from '../../components/shared/Button.js'
-    import Image from '../../components/shared/Image.js'
+    - import Button from '../../components/shared/Button.js'
+    - import Image from '../../components/shared/Image.js'
 - Live relaod.
 - Sourcemaps.
