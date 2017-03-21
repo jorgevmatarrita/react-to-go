@@ -9,8 +9,8 @@ module.exports = () =>
             <h1 className="page-title" >React to go!</h1>
             <Image css='logo' source={react_icon} />
         </div>
-        <p>
+        <h2 className="align-center">
             Simple React-Redux boilerplate for a webapplication.
-        </p>    
+        </h2>    
     </div>
 ;
