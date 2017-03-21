@@ -1,7 +1,11 @@
+$header-nav-item : $curious-blue;
+$header-border   : $silver;
+$header-bg       : $whitesmoke;
+
 header {
     padding: 15px;
-    background: whitesmoke;
-    border-bottom: 1px solid #ccc;
+    background: $header-bg;
+    border-bottom: 1px solid $header-border;
 
     nav {
         ul { 
@@ -15,7 +19,7 @@ header {
             text-transform: uppercase;
         }
         a, a:visited {
-            color:#1E8BC3;
+            color: $header-nav-item;
             &.active {
                 font-weight: bold;
             }
