@@ -19,7 +19,6 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={hashRouter.history} >
             <section>
-                <Helmet title="React to go!" />
                 <Header />
                 <Route exact path="/" component={Home} />
                 <Route path="/example" component={Example} />
