@@ -6,9 +6,9 @@ const
     ExtractTextPlugin  = require('extract-text-webpack-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
     // Path constants
-    SOURCE       = './source',
-    DIST         = './distribution',
-    NODE_MODULES = './node_modules'; 
+    SOURCE       = '../source',
+    DIST         = '../distribution',
+    NODE_MODULES = '../node_modules'; 
 
 module.exports = {
     context : path.resolve(__dirname, SOURCE),
@@ -75,11 +75,8 @@ module.exports = {
             ]
         }),
     ],
-    watch : false,
+    watch : true,
     resolve : {
         modules : [NODE_MODULES, SOURCE]
-    },
-    devServer: {
-        contentBase: path.resolve(__dirname, DIST),
     },
 };
