@@ -1,17 +1,6 @@
-const ENV     = require('yargs').argv.ENV;
+const IS_PROD    = (process.env.npm_lifecycle_event === 'build'),
+      devConfig  = require('./webpack/webpack.development.config'),
+      prodConfig = require('./webpack/webpack.production.config');
 
-var webpackConfig = {};
-
-switch (ENV) {
-    case 'prod':
-    case 'production':
-        webpackConfig = require('./webpack/webpack.production.config');
-        break;
-    case 'dev':
-    case 'development':
-    default:
-        webpackConfig = require('./webpack/webpack.development.config');
-        break;
-};
-
-module.exports = webpackConfig;
+// Determines which config to use and then exports it.
+module.exports = (IS_PROD) ? prodConfig : devConfig;
