@@ -7,7 +7,7 @@ const
     CleanWebpackPlugin = require('clean-webpack-plugin'),
     // Path constants
     SOURCE       = '../source',
-    DIST         = '../public',
+    PROD         = '../production',
     NODE_MODULES = '../node_modules'; 
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
         app : './app.main.js',
     },
     output : {
-        path : path.resolve(__dirname, DIST),
+        path : path.resolve(__dirname, PROD),
         filename : '[name].bundle.js', 
     },
     module: {
@@ -66,7 +66,7 @@ module.exports = {
             filename: 'index.html',
             template: './index.tpl.html',
         }),
-        new CleanWebpackPlugin([DIST], {
+        new CleanWebpackPlugin([PROD], {
             exclude : [
                 'app.commons.js',
                 'app.bundle.js',
