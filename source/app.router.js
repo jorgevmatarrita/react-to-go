@@ -24,5 +24,5 @@ ReactDOM.render(
             </section>
         </Router>
     </Provider>,
-    document.getElementById('ui-view')
+    document.getElementById('router-root')
 );
