@@ -2,22 +2,24 @@ const
     // Dependencies.
     path               = require('path'),
     webpack            = require('webpack'),
+    // Pluggins.
     HtmlWebpackPlugin  = require('html-webpack-plugin'),
     ExtractTextPlugin  = require('extract-text-webpack-plugin'),
-    CleanWebpackPlugin = require('clean-webpack-plugin'),
-    // Path constants
-    SOURCE       = '../source',
-    PROD         = '../production',
-    NODE_MODULES = '../node_modules'; 
+    // Path constants.
+    ROOT         = path.resolve(__dirname, '../'),
+    SOURCE       = path.resolve(ROOT, 'source'),
+    PROD         = path.resolve(ROOT, 'production'),
+    NODE_MODULES = path.resolve(ROOT, 'node_modules');
 
-module.exports = {
-    context : path.resolve(__dirname, SOURCE),
+var config = {
+    target: 'web',
+    context : SOURCE,
     entry : {
         app : './app.main.js',
     },
     output : {
-        path : path.resolve(__dirname, PROD),
-        filename : '[name].bundle.js', 
+        path : PROD,
+        filename : '[name]_[chunkhash].js',
     },
     module: {
         rules: [
@@ -55,27 +57,30 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: '[name].bundle.css',
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'commons',
-            filename: 'app.commons.js',
-            minChunks: 2,
+            filename: 'styles_[chunkhash].css',
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './index.tpl.html',
-        }),
-        new CleanWebpackPlugin([PROD], {
-            exclude : [
-                'app.commons.js',
-                'app.bundle.js',
-                'app.bundle.css',
-                'index.html'
-            ]
         }),
     ],
     resolve : {
         modules : [NODE_MODULES, SOURCE]
     },
 };
+
+// If the app has two or more entry points the CommonChunkPlugin is injected.
+if (Object.keys(config.entry).length >= 2) {
+
+    config.plugins = [
+        ...config.plugins,
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'shared',
+            filename: '[name]_[chunkhash].js',
+            minChunks: 2,
+        })
+    ];
+
+}
+
+module.exports = config;
