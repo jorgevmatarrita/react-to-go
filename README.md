@@ -8,7 +8,7 @@ Installation:
 
 Develop in localhost: 
 
-- npm start
+- npm run dev
 
 Build Production
 
